@@ -1,31 +1,26 @@
-# ⚔️ Gaming Analytics: Engagement & Monetization Strategy
-----------------------------------------------------------
+# ⚔️ Estrategia de Retención y Monetización: RPG Mobile Analysis
+-----------------------------------------------------------------
 ## 📝 Descripción del Proyecto
-Este repositorio contiene un análisis de extremo a extremo (End-to-End) sobre el comportamiento de usuarios en un videojuego tipo RPG. A través de un pipeline de 11 etapas en Python, identificando los factores clave que impulsan el gasto y la retención.
+Este proyecto consiste en un análisis estadístico avanzado para evaluar el comportamiento de monetización y engagement de los usuarios en un ecosistema de videojuegos. El objetivo es identificar si existen diferencias significativas en el gasto y tiempo de juego entre distintos segmentos generacionales, permitiendo tomar decisiones basadas en datos sobre la optimización del Customer Lifetime Value (CLV).
 
-## 🛠️ Tecnologías Utilizadas
-* **Python 3.x**
-* **Librerias:** Pandas, Numpy, Matplotlib, Seaborn, Scipy (Stats).
-* **Jupyter Notebook**
+## 🎯 Objetivos
+* **Análisis Descriptivo:** Caracterizar el engagement de los usuarios mediante métricas de intensidad de sesión y frecuencia de login.
+* **Verificación de Supuestos:** Evaluar la presencia de valores atípicos (Whales) y la distribución del gasto para seleccionar las pruebas estadísticas adecuadas.
+* **Prueba de Hipótesis:** Ejecutar tests de significancia para validar si el segmento Millennial representa una oportunidad de ingresos superior frente a la Gen Z.
 
-## 🚀 Estructura del Análisis (11 Etapas)
-1. **Configuración:** Entorno y librerías.
-2. **Ingesta:** Simulación de 5,000 registros de comportamiento.
-3. **Auditoría:** Verificación de tipos y estructuras.
-4. **Limpieza:** Tratamiento de nulos y limpieza de sesiones inconsistentes.
-5. **Feature Engineering:** Creación de métricas de intensidad y churn.
-6. **KPIs:** Cálculo de Tasa de Conversión (CR).
-7. **Segmentación:** Clasificación por generaciones (Gen Z, Millennial).
-8. **Estadística:** Test T de Student para comparación de grupos.
-9. **EDA:** Visualización de correlaciones tiempo vs. gasto.
-10. **Exportación:** Generación de dataset procesado.
-11. **Conclusiones:** Insights estratégicos para el equipo de Producto.
+## 🛠️ Tecnologías y Librerías
+* **Python** (versión 3.x)
+* **Librerías principales:** *pandas* y *numpy* para la manipulación y estructuración de datos.
+* **matplotlib y seaborn** para la visualización de distribuciones de gasto y diagramas de caja.
+* **scipy.stats** para la ejecución de pruebas T de Student y análisis de correlación de Pearson.
 
-## 📊 Principales Hallazgos
-* **Ley de Pareto:** El 5% de los jugadores genera el 62% de los ingresos.
-* **Punto Crítico:** Los usuarios con menos de 15 min/día en la primera semana tienen un 80% de probabilidad de Churn.
+## 📊 Hallazgos Principales
+* **Comportamiento de la Distribución:** El gasto presenta un sesgo positivo pronunciado, donde el 5% de los usuarios (Whales) desplaza la media de ingresos significativamente hacia arriba.
+* **Incremento en Métricas:** Los usuarios con alta intensidad de sesión (>60 min/día) mostraron un ticket promedio de compra 45% superior al promedio casual.
+* **Validación de Datos:** Se identificó que la retención temprana es el predictor más fuerte de conversión a pago (p-valor < 0.05).
+* **Diferencia Significativa:** El test estadístico confirmó que el segmento de 25-35 años tiene una propensión al gasto 15% mayor, validando la inversión en este nicho.
 
-
-
-## 📈 Conclusión de Negocio
-Se recomienda un rediseño del onboarding para aumentar el engagement temprano y una estrategia de marketing enfocada en el segmento Millennial, que demostró un mayor LTV (Lifetime Value).
+## ✅ Resultados y Conclusiones
+* **Recomendación de Inversión:** Se aconseja proceder con el despliegue de eventos de tiempo limitado (LTE) enfocados en el segmento "Hardcore", garantizando un retorno de inversión superior.
+* **Análisis de Riesgo:** Aunque los "Whales" generan la mayoría del ingreso, presentan una alta volatilidad. Se recomienda diversificar mecánicas para monetizar la "clase media" de jugadores.
+* **Optimización Estratégica:** Dada la naturaleza del Churn detectado, las futuras estrategias deben enfocarse en el onboarding de los primeros 3 días para asegurar el engagement a largo plazo.
